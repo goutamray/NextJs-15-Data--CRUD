@@ -58,7 +58,7 @@ export const deleteDevData = async (id) => {
 
   const dev = await Devs.findByIdAndDelete(id); 
 
-  return dev; 
+  revalidatePath("/devs"); 
 }
 
 

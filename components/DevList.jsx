@@ -30,7 +30,7 @@ const DevList = async() => {
                   <h3> {item?.location} </h3>
                   <div className="flex gap-2">
                      <button className="bg-green-600 text-white px-2 py-1 rounded-md "> Edit </button>
-                     <Button id={item?._id}/>
+                     <Button id={item?._id.toString()}/>
                   </div>
             </div>
             })
