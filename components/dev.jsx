@@ -1,21 +1,9 @@
-import { cloudUpload } from "@/utilis/CloudUpload"
+
+import { createDevData } from "@/actions/devsAction"
 import DevList from "./DevList"
 
 
-const Dev = () => {
-
-  const createDevData = async ( formData ) => {
-    "use server"
-
-    await cloudUpload({
-      file :  formData.get("photo"), 
-      preset : "next-app", 
-      cloudName: "dbtksv1tc"
-    }); 
-
-    
-
-  }
+const Dev = async () => {
 
   return (
     <div className="px-20 py-20">
